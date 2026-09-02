@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #F3F6F6;
+  --ink: #0B2E33;
+  --primary: #028090;
+  --secondary: #00A896;
+  --accent: #02C39A;
+  --dark: #013A40;
+  --line: #DCE6E6;
+  --paper: #FFFFFF;
+  --muted: #5C7A7D;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); }
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+
+.btn-primary { background: var(--dark); color: white; border: none; cursor: pointer; transition: background .15s ease, transform .12s ease; }
+.btn-primary:hover { background: var(--primary); transform: translateY(-1px); }
+.btn-primary:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+.btn-accent { background: var(--accent); color: var(--dark); border: none; cursor: pointer; font-weight: 600; transition: filter .15s ease, transform .12s ease; }
+.btn-accent:hover { filter: brightness(0.95); transform: translateY(-1px); }
+.btn-outline { background: transparent; border: 1.5px solid var(--dark); color: var(--dark); cursor: pointer; }
+.btn-outline:hover { background: var(--dark); color: white; }
+
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; }
+input, select, textarea { font-family: var(--font-body); }
+input:focus, select:focus, textarea:focus, button:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+
+.badge { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: .02em; }
+.badge-pending { background: #FDF3E2; color: #A8710A; }
+.badge-confirmed { background: #E3F3FF; color: #0B5FA8; }
+.badge-completed { background: #E4F7F1; color: #0E7A56; }
+.badge-cancelled { background: #FBEAEA; color: #B23A3A; }
